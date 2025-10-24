@@ -9,9 +9,18 @@ function addTask(){
         let li = document.createElement("li");
         li.innerHTML = inputBox.value;
         listContainer.appendChild(li);
-        let span = document.createElement("span");
-        span.innerHTML = "\u00d7"; //This is cross icon
-        li.appendChild(span);
+
+        //for edit
+        let editSpan = document.createElement("span");
+        editSpan.className = "edit-btn";
+        editSpan.innerHTML = "<img src='./images/edit.png' alt='Edit Icon' class='editIco'>";
+        li.appendChild(editSpan);
+
+        //for delete
+        let deleteSpan = document.createElement("span");
+        deleteSpan.className = "delete-btn";
+        deleteSpan.innerHTML = "\u00d7";
+        li.appendChild(deleteSpan);
     }
     inputBox.value = "";
     saveData();
@@ -22,9 +31,18 @@ listContainer.addEventListener("click", function(e){
         e.target.classList.toggle("checked");
         saveData();
     }
-    else if(e.target.tagName === "SPAN"){
-        e.target.parentElement.remove(); //Parent ele is li, so its removed
+    else if(e.target.classList.contains("delete-btn")){
+        e.target.parentElement.remove();
         saveData();
+    }
+    else if(e.target.classList.contains("editIco")){
+        let li = e.target.closest("li");
+        let newText = prompt("Edit your task:", li.firstChild.textContent);
+        
+        if (newText !== null && newText !== "") {
+            li.firstChild.textContent = newText;
+            saveData();
+        }
     }
 }, false);
 

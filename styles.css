@@ -7,7 +7,7 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    background: radial-gradient(circle, #30b3a1 0%, #317daf 100%);
+    background: linear-gradient(135deg, #304352 0%, #d7d2cc 100%);
     padding: 10px;
 }
 .todo-app{
@@ -48,22 +48,12 @@ button{
     border:none;
     outline: none;
     padding: 16px 50px;
-    background: #ff5945;
+    background: #db4d3d;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
 }
-/* ul li{
-    list-style: none;
-    padding: 15px 20px;
-    background: #f4f4f4;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
 
 ul li{
     list-style: none;
@@ -95,9 +85,22 @@ ul li.checked::before{
     background-image: url(./images/checked.png);
 }
 
-ul li span{
+ul li span.delete-btn {
     position: absolute;
     right: 0;
+    top: 5px;
+    width: 40px;
+    font-size: 22px;
+    color: #000000;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/* for span */
+ul li span.edit-btn {
+    position: absolute;
+    right: 40px;
     top: 5px;
     width: 40px;
     font-size: 22px;
@@ -106,7 +109,19 @@ ul li span{
     text-align: center;
     border-radius: 50%;
 }
-ul li span:hover{
+
+/* for icon img */
+.editIco{
+    width: 18px;
+    height: 18px;
+    margin-top: 11px;
+}
+
+ul li span.delete-btn:hover{
     background: #edeef0;
-    color: #ff5945;
+    /* color: #ff5945; */
+}
+
+ul li span.edit-btn:hover{
+    background: #edeef0;
 }
