@@ -1,33 +1,32 @@
-# To-Do List App
+# React + TypeScript + Vite
 
-A simple, clean, and interactive To-Do List web application built with HTML, CSS, and vanilla JavaScript. This project allows users to add new tasks, edit existing tasks, mark them as complete, and delete them. The app also features persistent storage using the browser's Local Storage, so your tasks remain even after you close or refresh the page.
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-**Live Demo:** [https://krrish41.github.io/To-Do-List/](https://krrish41.github.io/To-Do-List/)
+Currently, two official plugins are available:
 
-## Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-- **Add Tasks**: Easily add new tasks to your list using the input field and "Add" button
-- **Edit Tasks**: Click the pencil icon next to a task to edit its content via a prompt
-- **Mark as Complete**: Click on a task to toggle its completion status. Completed tasks are visually distinguished with a line-through and a checkmark
-- **Delete Tasks**: Remove tasks from the list by clicking the "×" icon that appears next to each task
-- **Persistent Storage**: All tasks are automatically saved to the browser's Local Storage. This means your list is preserved even if you refresh or close the browser window
-- **Empty Input Validation**: The app will alert the user if they try to add an empty task
+## React Compiler
 
-## Technologies Used
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- **HTML5**: Provides the basic structure and content of the web page
-- **CSS3**: Used for all styling, including layout, backgrounds, and custom styles for the list items (checked/unchecked states, edit/delete buttons)
-- **Vanilla JavaScript**: Powers all the application logic, including:
-  - DOM manipulation (adding/editing/deleting tasks)
-  - Event handling (clicks for adding, completing, editing, and deleting)
-  - Interacting with the Web Storage API (localStorage) to save and retrieve tasks
+## Expanding the Oxlint configuration
 
-## How to Use
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-1. **Clone or Download**: Clone this repository or download the ZIP file containing `index.html`, `styles.css`, `script.js`, and the `images` folder
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
 
-2. **Ensure Image Paths**: Make sure the `images` folder (containing `checked.png`, `unchecked.png`, `webIco.png`, and `edit.png`) is in the same directory as the HTML, CSS, and JS files, as the CSS, HTML, and JS files reference them
-
-3. **Open in Browser**: Simply open the `index.html` file in any modern web browser (like Google Chrome, Firefox, Safari, or Edge)
-
-That's it! You can now start managing your tasks.
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
