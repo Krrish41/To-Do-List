@@ -138,7 +138,7 @@ function App() {
             padding: '0.75rem 1.25rem',
             marginBottom: '1.25rem',
           }}>
-            <img src="/favicon.svg" alt="Logo" style={{ width: '32px', height: '32px', objectFit: 'cover', borderRadius: '8px' }} />
+            <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="Logo" style={{ width: '32px', height: '32px', objectFit: 'cover', borderRadius: '8px' }} />
             <h1 style={{
               fontSize: '1.75rem',
               fontWeight: 600,
