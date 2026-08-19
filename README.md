@@ -1,100 +1,33 @@
-# To-Do List Application
+# To-Do List App
 
-A modern, feature-rich To-Do List application built with clean architecture and intuitive user experience.
+A simple, clean, and interactive To-Do List web application built with HTML, CSS, and vanilla JavaScript. This project allows users to add new tasks, edit existing tasks, mark them as complete, and delete them. The app also features persistent storage using the browser's Local Storage, so your tasks remain even after you close or refresh the page.
 
-## 🌟 Features
+**Live Demo:** [https://krrish41.github.io/To-Do-List/](https://krrish41.github.io/To-Do-List/)
 
-- ✅ Create, read, update, and delete tasks
-- 📅 Due dates and priority levels
-- 🏷️ Category/tag support
-- 🔍 Search and filter tasks
-- 📱 Responsive design
-- 💾 Local storage persistence
-- 🌙 Dark/Light mode toggle
+## Features
 
-## 🚀 Live Demo
+- **Add Tasks**: Easily add new tasks to your list using the input field and "Add" button
+- **Edit Tasks**: Click the pencil icon next to a task to edit its content via a prompt
+- **Mark as Complete**: Click on a task to toggle its completion status. Completed tasks are visually distinguished with a line-through and a checkmark
+- **Delete Tasks**: Remove tasks from the list by clicking the "×" icon that appears next to each task
+- **Persistent Storage**: All tasks are automatically saved to the browser's Local Storage. This means your list is preserved even if you refresh or close the browser window
+- **Empty Input Validation**: The app will alert the user if they try to add an empty task
 
-**[View Live Demo](https://your-live-demo-link-here.com)**
+## Technologies Used
 
-> **Note:** Replace the link above with your actual deployed application URL.
+- **HTML5**: Provides the basic structure and content of the web page
+- **CSS3**: Used for all styling, including layout, backgrounds, and custom styles for the list items (checked/unchecked states, edit/delete buttons)
+- **Vanilla JavaScript**: Powers all the application logic, including:
+  - DOM manipulation (adding/editing/deleting tasks)
+  - Event handling (clicks for adding, completing, editing, and deleting)
+  - Interacting with the Web Storage API (localStorage) to save and retrieve tasks
 
-## 🛠️ Tech Stack
+## How to Use
 
-- **Frontend:** HTML5, CSS3, JavaScript (ES6+)
-- **Storage:** LocalStorage / IndexedDB
-- **Deployment:** GitHub Pages / Netlify / Vercel
+1. **Clone or Download**: Clone this repository or download the ZIP file containing `index.html`, `styles.css`, `script.js`, and the `images` folder
 
-## 📦 Installation
+2. **Ensure Image Paths**: Make sure the `images` folder (containing `checked.png`, `unchecked.png`, `webIco.png`, and `edit.png`) is in the same directory as the HTML, CSS, and JS files, as the CSS, HTML, and JS files reference them
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Krrish41/To-Do-List.git
-   ```
+3. **Open in Browser**: Simply open the `index.html` file in any modern web browser (like Google Chrome, Firefox, Safari, or Edge)
 
-2. Navigate to the project directory:
-   ```bash
-   cd To-Do-List
-   ```
-
-3. Open `index.html` in your browser or serve with a local server:
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   
-   # Using Node.js (http-server)
-   npx http-server
-   
-   # Using VS Code Live Server extension
-   ```
-
-## 🎯 Usage
-
-1. **Add a task:** Click the "Add Task" button or press `Enter` in the input field
-2. **Edit a task:** Click on any task to modify its content
-3. **Mark complete:** Click the checkbox next to a task
-4. **Delete a task:** Click the delete icon on a task
-5. **Filter tasks:** Use the filter buttons (All, Active, Completed)
-6. **Search tasks:** Type in the search bar to find specific tasks
-
-## 📁 Project Structure
-
-```
-To-Do-List/
-├── index.html          # Main HTML file
-├── style.css           # Stylesheet
-├── script.js           # Main JavaScript logic
-├── assets/             # Images, icons, fonts
-└── README.md           # This file
-```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**Krrish Ranjan**
-
-- 📧 Email: [krrish4173@gmail.com](mailto:krrish4173@gmail.com)
-- 🐙 GitHub: [@Krrish41](https://github.com/Krrish41)
-- 🔗 Repository: [https://github.com/Krrish41/To-Do-List](https://github.com/Krrish41/To-Do-List)
-
-## 🙏 Acknowledgments
-
-- Inspired by various todo applications
-- Icons from [Font Awesome](https://fontawesome.com/) / [Heroicons](https://heroicons.com/)
-- Color palette from [Tailwind CSS](https://tailwindcss.com/)
-
----
-
-⭐ **Star this repository if you found it helpful!**
+That's it! You can now start managing your tasks.
